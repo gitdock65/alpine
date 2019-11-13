@@ -4,4 +4,4 @@ RUN apk update && \
     apk add wget unzip 
 ADD run.sh /  
 RUN chmod 777 /run.sh
-CMD ["/bin/sh"]
+CMD ["./run.sh"]
