@@ -8,4 +8,4 @@ RUN apk update && \
 COPY docker_entrypoint.sh /
 RUN chmod 755 /docker_entrypoint.sh
 ENTRYPOINT ["/docker_entrypoint.sh"]
-CMD ["echo", "Jetzt läuft der Container!"]
+# CMD ["echo", "Jetzt läuft der Container!"]
