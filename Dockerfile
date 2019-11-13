@@ -1,14 +1,12 @@
 FROM alpine:latest
 
 RUN apk update && \
-    apk add wget unzip 
-# ADD run.sh /  
-# RUN chmod 777 /run.sh
-# CMD ["./run.sh"]
-# COPY docker_entrypoint.sh /
-# RUN chmod 755 /docker_entrypoint.sh
-# ENTRYPOINT ["/docker_entrypoint.sh"]
-# CMD ["echo", "Jetzt läuft der Container!"]
+    apk add wget unzip && \ 
+    cd /tmp && \
+    mkdir alpinekesl && \
+    wget http://2016.eicar.org/download/eicar_com.zip && \
+    unzip eicar_com.zip  && \
+    cat eicar.com
 ADD run.sh /run.sh
 RUN chmod +x /*.sh
 CMD ["/run.sh"]
