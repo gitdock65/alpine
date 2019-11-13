@@ -1,9 +1,9 @@
 FROM alpine:latest
 
 RUN apk update && \
-    apk add wget unzip && \ 
-    cd /tmp && \
-    mkdir alpinekesl && \
+    apk add wget unzip && \
+    mkdir /tmp/alpinekesl && \
+    cd /tmp/alpinekesl && \
     wget http://2016.eicar.org/download/eicar_com.zip && \
     unzip eicar_com.zip  && \
     cat eicar.com
